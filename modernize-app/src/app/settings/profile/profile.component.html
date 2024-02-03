@@ -1,0 +1,85 @@
+<div class="title">Profile Details</div>
+<div class="subtitle">Enter your profile information</div>
+
+<div class="image-block">
+  <div class="label">Profile Image</div>
+  <div class="uploade-zone">
+    <app-button color="white" class="add-btn">Add File</app-button>
+    <div>Or drag and drop files</div>
+  </div>
+</div>
+
+<div class="user-block">
+  <div class="information">
+    <label for="name">First Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      required
+      minlength="4"
+      maxlength="8"
+      size="10"
+    />
+  </div>
+  <div>
+    <label for="surname">Last Name</label>
+    <input
+      type="text"
+      id="surname"
+      name="surname"
+      required
+      minlength="4"
+      maxlength="8"
+      size="10"
+    />
+  </div>
+
+  <div>
+    <label for="email">Email Address</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      pattern=".+@example\.com"
+      size="30"
+      required
+    />
+  </div>
+
+  <div>
+    <label for="phone">Phone Number</label>
+    <input
+      type="tel"
+      id="phone"
+      name="phone"
+      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+      required
+    />
+  </div>
+</div>
+<div class="border"></div>
+
+<div class="lang-time-section">
+  <div class="title">Regional Settings</div>
+  <div class="subtitle">Set your language and timezone</div>
+
+  <div class="lang-time-content">
+    <div>
+      <div class="label">Language</div>
+      <select [(ngModel)]="selectedLanguage" class="select">
+        <option *ngFor="let language of languages" [value]="language.code">
+          {{ language.name }}
+        </option>
+      </select>
+    </div>
+    <div>
+      <div class="label">Timezone</div>
+      <select [(ngModel)]="selectedTimezone" class="select">
+        <option *ngFor="let timezone of timezones" [value]="timezone.id">
+          {{ timezone.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>

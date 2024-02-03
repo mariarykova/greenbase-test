@@ -1,0 +1,10 @@
+<button
+  class="button"
+  [ngClass]="{
+    'button-white': color === 'white',
+    'button-blue': color === 'blue'
+  }"
+  [disabled]="disabled"
+>
+  <ng-content></ng-content>
+</button>

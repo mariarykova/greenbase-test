@@ -1,0 +1,10 @@
+<div *ngFor="let notification of notificationsList" class="notification-item">
+  <div>
+    <div class="title">{{ notification.title }}</div>
+    <div class="subtitle">{{ notification.subtitle }}</div>
+  </div>
+  <mat-slide-toggle
+    [(ngModel)]="notification.isSwitched"
+    color="primary"
+  ></mat-slide-toggle>
+</div>

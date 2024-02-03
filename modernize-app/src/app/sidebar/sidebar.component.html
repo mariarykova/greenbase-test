@@ -1,0 +1,21 @@
+<app-button color="white" (click)="toggleSidebar()" class="open-btn">{{
+  buttonText
+}}</app-button>
+<div class="sidebar" [class.open]="isSidebarOpen">
+  <div *ngFor="let group of sidebarList" class="sidebar-list">
+    <div *ngIf="group.title" class="title">{{ group.title }}</div>
+    <ul>
+      <li
+        *ngFor="let item of group.items"
+        [ngClass]="group.type"
+        [ngClass]="{ selected: item.name === selected }"
+        (click)="selectItem(item.name)"
+      >
+        <img [src]="item.icon" [alt]="item.name" /> {{ item.name }}
+        <div class="bagde-wrapper">
+          <div *ngIf="item?.quantity" class="badge">{{ item.quantity }}</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+.button {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-white {
+  color: #1e5eff;
+  background-color: #ffffff;
+  border: 1px solid #d7dbec;
+  border-radius: 5px;
+  padding: 10px 10px;
+  width: 101px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-white:hover {
+  border: 1px solid #1e5eff;
+  color: #ffffff;
+  background-color: #1e5eff;
+}
+
+.button-blue {
+  color: #ffffff;
+  background: #1e5eff;
+  width: 86px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-blue:hover {
+  color: #1e5eff;
+  background: #ffffff;
+}
